@@ -50,7 +50,7 @@ class AddAddress extends Component {
           />
         </div>
         <div className="field">
-          <label>Code:</label>
+          <label>Postal Code:</label>
           <input
             type="text"
             onChange={e => this.setState({ code: e.target.value })}
