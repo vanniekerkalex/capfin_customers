@@ -49,3 +49,86 @@ You can find more information on GraphQL here:
 ```
 https://graphql.org/
 ```
+
+## API Usage Demo
+To view all the customers associated with a specific address.
+
+### 1. Display all the addresses in DB with their information.
+
+Input
+```
+{
+ addresses {
+  id
+  street
+  suburb
+  code
+ }
+}
+```
+Output
+```
+{
+  "data": {
+    "addresses": [
+      {
+        "id": "5cdf38d600d45419cfc22fbe",
+        "street": "5 Newlands",
+        "suburb": "Claremont",
+        "code": "7708"
+      },
+      {
+        "id": "5cdfe879a57af354b7b6cd91",
+        "street": "17 Highwick",
+        "suburb": "Kenilworth",
+        "code": "7780"
+      },
+      {
+        "id": "5cdff83fa2d0515a24244b07",
+        "street": "1 Industrie Street",
+        "suburb": "Kuilsriver",
+        "code": "7580"
+      },
+      {
+        "id": "5ce004bb10a8996cab2a39ee",
+        "street": "25 Protea Road",
+        "suburb": "Newlands",
+        "code": "7708"
+      }
+    ]
+  }
+}
+```
+
+### 2. Copy the ID of one of the addresses that you wish to get the customer list for, then do as follows:
+
+Input
+```
+{
+ address(id: "5cdfe879a57af354b7b6cd91") {
+  customers{
+    fname
+    sname 
+  }
+ }
+}
+```
+Output
+```
+{
+  "data": {
+    "address": {
+      "customers": [
+        {
+          "fname": "Mike",
+          "sname": "Zimbo"
+        },
+        {
+          "fname": "Fred",
+          "sname": "Hope"
+        }
+      ]
+    }
+  }
+}
+```
