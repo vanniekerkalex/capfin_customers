@@ -1,4 +1,4 @@
-# CAPFIN: Customers List
+# CAPFIN: Customer List
 A demo to allow addition of customers and addresses to MongoDB whilst associating customers to respective addresses.
 
 ## Tech Stack
