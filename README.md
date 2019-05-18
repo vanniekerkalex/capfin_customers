@@ -22,14 +22,14 @@ https://github.com/vanniekerkalex/capfin_customers.git
 https://nodejs.org/
 ```
 
-3. Go to the **./server** directory and run the following commands to install the necessary packages and start the server:
+3. Open a terminal window, go to the **./server** directory and run the following commands to install the necessary packages and start the server:
 
 ```
 npm update
 nodemon
 ```
 
-4. Go to the **./client** directory and run the following commands to install the necessary packages and start the react web app:
+4. Open a new (2nd) terminal window, go to the **./client** directory and run the following commands to install the necessary packages and start the react web app:
 
 ```
 npm update
