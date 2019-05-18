@@ -8,8 +8,9 @@ class CustomerDetails extends Component {
     if (customer) {
       return (
         <div>
+          <h1>Customer Information</h1>
           <h2>{customer.fname} {customer.sname}</h2>
-          <h3>Address</h3>
+          <h3>Address:</h3>
           <p>{customer.address.street}</p>
           <p>{customer.address.suburb}</p>
           <p>{customer.address.code}</p>
