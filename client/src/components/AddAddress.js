@@ -4,6 +4,7 @@ import {
   addAddressMutation,
   getAddressesQuery
 } from "../queries/queries";
+import '../App.css';
 
 class AddAddress extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class AddAddress extends Component {
   render() {
     return (
       <form id="add-address" onSubmit={this.submitForm.bind(this)}>
-        <h3>Add Address</h3>
+        <h3 className="addForm">Add Address</h3>
         <div className="field">
           <label>Street:</label>
           <input

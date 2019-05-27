@@ -6,10 +6,10 @@ const cors = require("cors");
 
 const app = express();
 
-//allow cross-origin requests
+//Cross Origin Resource Sharing
 app.use(cors());
 
-mongoose.connect("mongodb://shaun:test123@ds119024.mlab.com:19024/gql-ninja", { useNewUrlParser: true });
+mongoose.connect("mongodb://capfin:capfin123@ds119024.mlab.com:19024/gql-ninja", { useNewUrlParser: true });
 mongoose.connection.once("open", () => {
   console.log("Connected to DB");
 });

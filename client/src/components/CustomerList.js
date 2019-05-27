@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
 import { getCustomersQuery } from "../queries/queries";
-
-// components
 import CustomerDetails from "./CustomerDetails";
 
 class CustomerList extends Component {
@@ -32,7 +30,6 @@ class CustomerList extends Component {
     }
   }
   render() {
-    //console.log(this.props);
     return (
       <div>
         <ul id="customer-list">{this.displayCustomers()}</ul>

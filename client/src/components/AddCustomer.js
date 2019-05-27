@@ -5,6 +5,7 @@ import {
   addCustomerMutation,
   getCustomersQuery
 } from "../queries/queries";
+import '../App.css';
 
 class AddCustomer extends Component {
   constructor(props) {
@@ -31,7 +32,6 @@ class AddCustomer extends Component {
   }
   submitForm(e) {
     e.preventDefault();
-    // use the addBookMutation
     if (this.state.fname.length > 0 && this.state.sname.length > 0) {
       if (this.state.addressId.length > 0 && this.state.addressId !== "Select address") {
         this.props.addCustomerMutation({
@@ -52,7 +52,7 @@ class AddCustomer extends Component {
   render() {
     return (
       <form id="add-customer" onSubmit={this.submitForm.bind(this)}>
-        <h3>Add Customer</h3>
+        <h3 className="addForm">Add Customer</h3>
         <div className="field">
           <label>First Name:</label>
           <input

@@ -22,7 +22,6 @@ const CustomerType = new GraphQLObjectType({
     address: {
       type: AddressType,
       resolve(parent, args) {
-        //return _.find(authors, { id: parent.authorId });
         return Address.findById(parent.addressId);
       }
     }
@@ -39,7 +38,6 @@ const AddressType = new GraphQLObjectType({
     customers: {
       type: new GraphQLList(CustomerType),
       resolve(parent, args) {
-        //return _.filter(books, { authorId: parent.id });
         return Customer.find({ addressId: parent.id });
       }
     }
@@ -53,8 +51,6 @@ const RootQuery = new GraphQLObjectType({
       type: CustomerType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-        // code to get data from db / other source
-        //return _.find(books, { id: args.id });
         return Customer.findById(args.id);
       }
     },
@@ -62,21 +58,18 @@ const RootQuery = new GraphQLObjectType({
       type: AddressType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-        //return _.find(authors, { id: args.id });
         return Address.findById(args.id);
       }
     },
     customers: {
       type: new GraphQLList(CustomerType),
       resolve(parent, args) {
-        //return books;
         return Customer.find({});
       }
     },
     addresses: {
       type: new GraphQLList(AddressType),
       resolve(parent, args) {
-        //return authors;
         return Address.find({});
       }
     }
